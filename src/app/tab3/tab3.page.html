@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="profile/profiles"></ion-back-button>
+        </ion-buttons>
+        <span> Profile Detail</span>
+      </ion-toolbar>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-back-button defaultHref="profile/profiles"></ion-back-button>
+          </ion-buttons>
+          <span> Profile Detail</span>
+        </ion-toolbar>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngFor="let profileData of profileDatas">
+    <ion-card class="profile-detail">
+      <div class="img">
+        <img [src]="profileData.img" />
+      </div>
+      <div class="content">
+        <ion-card-header>
+          <ion-card-title>{{profileData.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="details-more">{{profileData.age}} Yrs, {{profileData.height.ft}} ft {{profileData.height.in}} in,
+            {{profileData.language}}, {{profileData.community}}, </div>
+          <div class="details-more">{{profileData.qualification}}, {{profileData.occupation}}, {{profileData.city}},
+          </div>
+          <div class="details-more">{{profileData.state}}, {{profileData.contry}}.</div>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

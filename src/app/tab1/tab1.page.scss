@@ -1,0 +1,83 @@
+@import "~swiper/css";
+@import "~swiper/css/effect-coverflow";
+@import "~swiper/css/navigation";
+@import '../../theme/media.scss';
+
+.swiper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    height: 320px;
+    width: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+//ion card
+ion-card-header {
+    padding: 10px 10px 0 10px;
+}
+
+ion-card-content {
+    padding: 10px !important;
+}
+
+.buttons {
+    padding: 0 10px 10px 10px;
+    ion-button {
+        margin: 0;
+        border-radius: 50%;
+    }
+
+    .pl-10 {
+        padding-left: 10px;
+    }
+}
+
+.img {
+    cursor: pointer;
+}
+
+//Mobile View
+@media #{$mobile} {
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        display: none;
+    }
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        display: none;
+    }
+    .swiper-slide img {
+        height: 250px;
+    }
+}
+
+//Destop View
+@media #{laptops} {
+    .swiper-slide {
+        max-width: 25%;
+        width: 100%;
+    }
+}
+
+//General
+.details-more {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

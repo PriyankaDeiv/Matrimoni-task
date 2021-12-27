@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Daily Recommendations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" scrollEvents="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Daily Recommendations</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="card">
+    <ion-card size-lg="3" size-md="4" size-sm="6" size="12" *ngFor="let profileData of profileDatas;let i = index"
+      style="position: absolute;">
+      <img [src]="profileData.img" class="img" />
+      <ion-card-header>
+        <ion-card-title>{{profileData.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="details-more">{{profileData.age}} Yrs, {{profileData.height.ft}} ft
+          {{profileData.height.in}}
+          in,
+          {{profileData.language}}, {{profileData.community}}, </div>
+        <div class="details-more">{{profileData.qualification}}, {{profileData.occupation}},
+          {{profileData.city}},
+        </div>
+        <div class="details-more">{{profileData.state}}, {{profileData.contry}}.</div>
+      </ion-card-content>
+      <div class="recommendetation-buttons">
+        <div class="short-list" (click)="shortlist(1,i)">
+          <ion-icon name="star-outline"></ion-icon> Shortlist
+        </div>
+        <div class="selection">
+          <b>Like her? &nbsp;</b>
+          <ion-button size="small" color="medium" shape="round" fill="outline" class="pl-10"
+            (click)="notInterest(-170,i)">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+          <ion-button size="small" color="primary" shape="round" fill="outline" (click)="interest(160,i)">
+            <ion-icon name="checkmark"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+  <p class="swipe">
+    <ion-icon name="arrow-back"></ion-icon>
+    &nbsp;Swipe&nbsp;
+    <ion-icon name="arrow-forward"></ion-icon>
+  </p>
+</ion-content>

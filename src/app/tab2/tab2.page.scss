@@ -1,0 +1,53 @@
+@import "../../theme/media.scss";
+img {
+    display: block;
+    height: 260px;
+    width: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.recommendetation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    .selection {
+        align-items: center;
+        display: flex;
+    }
+    .short-list {
+        cursor: pointer;
+    }
+}
+
+.card {
+    position: relative;
+    height: 90%;
+}
+
+.swipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//Desktop View
+ion-card {
+    width: 98%;
+}
+
+.swipe {
+    display: none;
+}
+
+//Mobile View
+@media #{$mobile} {
+    ion-card {
+        width: 94%;
+    }
+    .swipe {
+        display: flex;
+    }
+}

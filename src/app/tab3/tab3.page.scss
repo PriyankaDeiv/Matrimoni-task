@@ -1,0 +1,38 @@
+//ion card
+ion-card-header {
+    padding: 10px 10px 0 10px;
+}
+
+ion-card-content {
+    padding: 10px !important;
+}
+
+.buttons {
+    padding: 0 10px 10px 10px;
+    ion-button {
+        margin: 0;
+        border-radius: 50%;
+    }
+
+    .pl-10 {
+        padding-left: 10px;
+    }
+}
+
+.swiper-slide {
+    max-width: 25%;
+    width: 100%;
+}
+
+.profile-detail {
+    display: flex;
+    .img {
+        max-width: 30%;
+        img {
+            max-width: 100%;
+            border: 0;
+            height: 100%;
+            width: auto;
+        }
+    }
+}
